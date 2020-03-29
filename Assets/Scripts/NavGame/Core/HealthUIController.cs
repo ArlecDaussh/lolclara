@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace NavGame.Core
 {
@@ -17,6 +18,11 @@ namespace NavGame.Core
 
         Transform cam;
 
+        DamageableGameObject damageable;
+
+        Image healthSlider;
+
+
         void Awake()
         {
             Canvas canvas = FindWorldCanvas();
@@ -26,6 +32,12 @@ namespace NavGame.Core
             }
             cam = Camera.main.transform;
             healthUI = Instantiate(healthUIPrefab, canvas.transform);
+            healthSlider = healthUI.transform.GetChild(0).GetComponent<Image>();
+            damageable = GetComponent<DamageableGameObject>();
+
+            damageable.onHealthChanged += UpdateHealth;
+            damageable.onDied += DestroyHealth;
+
         }
 
         void LateUpdate()
@@ -47,6 +59,19 @@ namespace NavGame.Core
                 }
             }
             return null;
+        }
+
+        void UpdateHealth(int maxHealth, int currentHealth)
+        {
+            if (healthUI != null)
+            {
+                float healthPercent = (float)currentHealth / maxHealth;
+                healthSlider.fillAmount = healthPercent;
+            }
+        }
+        void DestroyHealth()
+        {
+            Destroy(healthUI);
         }
     }
 }
