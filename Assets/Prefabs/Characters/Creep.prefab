@@ -213,6 +213,7 @@ GameObject:
   - component: {fileID: 4923445614503984396}
   - component: {fileID: 2225124393905641539}
   - component: {fileID: 6936608825857286437}
+  - component: {fileID: 7600059840937824764}
   m_Layer: 0
   m_Name: Creep
   m_TagString: Untagged
@@ -290,6 +291,8 @@ MonoBehaviour:
   ofenseStats:
     damage: 10
     attackSpeed: 1
+  enemyLayers:
+  - Infantry
 --- !u!114 &2225124393905641539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,3 +325,16 @@ MonoBehaviour:
   healthUIPrefab: {fileID: 6281155726799449156, guid: 3e014d1c44f19f14fbc598d306565ea1,
     type: 3}
   healthPosition: {fileID: 4520214177449071394}
+--- !u!135 &7600059840937824764
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4923445614503984397}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 6
+  m_Center: {x: 0, y: 0, z: 0}
