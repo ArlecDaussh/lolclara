@@ -214,6 +214,7 @@ GameObject:
   - component: {fileID: 2225124393905641539}
   - component: {fileID: 6936608825857286437}
   - component: {fileID: 7600059840937824764}
+  - component: {fileID: 114906643290636398}
   m_Layer: 0
   m_Name: Creep
   m_TagString: Untagged
@@ -234,6 +235,7 @@ Transform:
   m_Children:
   - {fileID: 4923445612880273097}
   - {fileID: 4520214177449071394}
+  - {fileID: 4142926539635843731}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -287,12 +289,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e62743317b7b394586c2833b025716b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  angularSpeed: 6
   contactRadius: 0.5
   ofenseStats:
-    damage: 10
+    damage: 5
     attackSpeed: 1
+  attackRange: 4
   enemyLayers:
   - Infantry
+  enemiesToAttack: []
 --- !u!114 &2225124393905641539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,11 +310,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e364e30a9f3900b4aa15c670fce65119, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  angularSpeed: 6
   contactRadius: 0.5
   defenseStats:
     maxHealth: 100
     armor: 1
   currentHealth: 0
+  damageTransform: {fileID: 4142926539635843731}
 --- !u!114 &6936608825857286437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,3 +345,50 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 6
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114906643290636398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4923445614503984397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb6f9a49d6001cf41adf59c9fd1babd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageSound: splash-hit2
+  dieSound: splash-death2
+  damageEffects: {fileID: 1367464130996691565, guid: 8c9669e486fd4e34a8f3692dcc79778c,
+    type: 3}
+  dieEffect: {fileID: 0}
+--- !u!1 &8908173035030674383
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4142926539635843731}
+  m_Layer: 0
+  m_Name: DamagePosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4142926539635843731
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8908173035030674383}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4923445614503984401}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
