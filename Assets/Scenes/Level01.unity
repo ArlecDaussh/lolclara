@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 287045456}
   - component: {fileID: 287045455}
   - component: {fileID: 287045454}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1001,6 +1001,9 @@ MonoBehaviour:
   walkableLayer:
     serializedVersion: 2
     m_Bits: 512
+  collectibleLayer:
+    serializedVersion: 2
+    m_Bits: 4096
 --- !u!195 &1076202473
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1509,7 +1512,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1654772265}
   - component: {fileID: 1654772266}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
