@@ -12,6 +12,7 @@ public class PlayerController : TouchableGameObject
     public LayerMask walkableLayer;
     public LayerMask collectibleLayer;
 
+    CollectibleGameObject pickupTarget;
     
     void Awake()
     {
@@ -21,6 +22,11 @@ public class PlayerController : TouchableGameObject
 
     
     void Update()
+    {
+        ProcessInput();
+        UpdateCollect();
+    }
+    void ProcessInput()
     {
         if (Input.GetMouseButtonDown(1))
         {
@@ -33,8 +39,23 @@ public class PlayerController : TouchableGameObject
             }
              if (Physics.Raycast(ray, out hit, Mathf.Infinity, collectibleLayer))
             {
+                pickupTarget = hit.collider.gameObject.GetComponent<CollectibleGameObject>();
                 Debug.Log("Collectible: " + hit.collider.name);
                 agent.SetDestination(hit.point);
+            }
+            else
+            {
+                pickupTarget = null;
+            }
+        }
+    }
+    void UpdateCollect()
+    {
+        if (pickupTarget != null)
+        {
+            if (IsInTouch(pickupTarget))
+            {
+                pickupTarget.Pickup();
             }
         }
     }
