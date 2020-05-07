@@ -9,11 +9,16 @@ public class PlayerController : TouchableGameObject
 {
     NavMeshAgent agent;
     Camera cam;
+
+    public float range = 4f;
+
     public LayerMask walkableLayer;
     public LayerMask collectibleLayer;
 
     CollectibleGameObject pickupTarget;
     
+    Vector3 actionPoint = Vector3.zero;
+
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -25,6 +30,7 @@ public class PlayerController : TouchableGameObject
     {
         ProcessInput();
         UpdateCollect();
+        UpdateAction();
     }
     void ProcessInput()
     {
@@ -47,6 +53,17 @@ public class PlayerController : TouchableGameObject
                 pickupTarget = null;
             }
         }
+        else if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, walkableLayer))
+            {
+                actionPoint = hit.point;
+                agent.SetDestination(hit.point);
+            }
+        }
     }
     void UpdateCollect()
     {
@@ -55,6 +72,17 @@ public class PlayerController : TouchableGameObject
             if (IsInTouch(pickupTarget))
             {
                 pickupTarget.Pickup();
+            }
+        }
+    }
+    void UpdateAction()
+    {
+        if (actionPoint != Vector3.zero)
+        {
+            if (Vector3.Distance(transform.position, actionPoint) <= range)
+            {
+                agent.ResetPath();
+                actionPoint = Vector3.zero;
             }
         }
     }
