@@ -3108,6 +3108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 826460cc559df4540a24595e432fb72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinText: {fileID: 1396810944}
   cooldownObjects:
   - {fileID: 860494548}
   - {fileID: 156902185}
