@@ -18,6 +18,7 @@ namespace NavGame.Core
         public Transform castTransform;
 
         public string[] enemyLayers;
+        public bool isInCombat { get; private set; }
 
         [SerializeField]
 
@@ -59,8 +60,11 @@ namespace NavGame.Core
                     agent.ResetPath();
                     FaceObjectFrame(enemiesToAttack[0].gameObject.transform);
                     AttackOnCooldown(enemiesToAttack[0]);
+                    isInCombat = true;
+                    return;
                 }
             }
+            isInCombat = false;
         }
 
         public void AttackOnCooldown(DamageableGameObject target)
