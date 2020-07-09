@@ -54,7 +54,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2179045656527938723}
-  m_LocalRotation: {x: 0.00000082412276, y: 0.00028244103, z: 0.010541363, w: 0.9999444}
+  m_LocalRotation: {x: 0.0000008241228, y: 0.00028244103, z: 0.010541364, w: 0.9999444}
   m_LocalPosition: {x: -0.0001430153, y: 0.021041276, z: 2.558967e-10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -449,7 +449,7 @@ GameObject:
   - component: {fileID: 2179045656518580087}
   - component: {fileID: 2179045656527970837}
   m_Layer: 11
-  m_Name: gatito
+  m_Name: Gatito
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -481,7 +481,7 @@ Animator:
   m_GameObject: {fileID: 2179045656527938743}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: d8a6623e20ac4cd43afaf1ebe3d6882f, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 69b532354b1447b49a10801e1dfef3cc, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -683,7 +683,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2179045656527938755}
-  m_LocalRotation: {x: 0.55089414, y: -0.44158596, z: 0.55796766, w: 0.43610725}
+  m_LocalRotation: {x: 0.5508942, y: -0.441586, z: 0.5579677, w: 0.43610728}
   m_LocalPosition: {x: -0.034642488, y: 0.1250144, z: -0.00045495873}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
