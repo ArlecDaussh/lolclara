@@ -1728,6 +1728,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3307393089725484484, guid: 16f23cc30b95fd748b4c0e29ff3f313a,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 74100a75403399b4295a0cd5fce10887, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16f23cc30b95fd748b4c0e29ff3f313a, type: 3}
 --- !u!4 &872719674 stripped
@@ -1923,6 +1928,7 @@ GameObject:
   - component: {fileID: 1076202474}
   - component: {fileID: 1076202473}
   - component: {fileID: 1076202472}
+  - component: {fileID: 1076202475}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2004,6 +2010,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1076202475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076202470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6c22528fe4b414e83deb81a8398053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smoothness: 0.1
 --- !u!1 &1095648073
 GameObject:
   m_ObjectHideFlags: 0
