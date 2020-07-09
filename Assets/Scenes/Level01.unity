@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44658017, g: 0.49641502, b: 0.57482153, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1474,8 +1474,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -591, y: 252.6}
-  m_SizeDelta: {x: -1237.3, y: -549.8}
+  m_AnchoredPosition: {x: -563.7, y: 252.6}
+  m_SizeDelta: {x: -1182.6, y: -549.8}
   m_Pivot: {x: 0.49999997, y: 0.5}
 --- !u!114 &762738715
 MonoBehaviour:
@@ -2517,7 +2517,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 441.6, y: -147}
+  m_AnchoredPosition: {x: 441.6, y: -138}
   m_SizeDelta: {x: -965.5, y: -605.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1474361045
@@ -3466,8 +3466,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -374, y: 252.6}
-  m_SizeDelta: {x: -1202, y: -549.8}
+  m_AnchoredPosition: {x: -345, y: 252.6}
+  m_SizeDelta: {x: -1144.1, y: -549.8}
   m_Pivot: {x: 0.49999997, y: 0.5}
 --- !u!114 &2083967747
 MonoBehaviour:
@@ -3571,8 +3571,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 441.6, y: -232.7}
-  m_SizeDelta: {x: -965.5, y: -540}
+  m_AnchoredPosition: {x: 441.6, y: -242.4}
+  m_SizeDelta: {x: -965.5, y: -559.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2087838099
 MonoBehaviour:
@@ -3762,7 +3762,7 @@ PrefabInstance:
     - target: {fileID: 1266663784452738833, guid: 5c7f814ae4e575d4c9030f97af0bf2fe,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.32
+      value: 18.79
       objectReference: {fileID: 0}
     - target: {fileID: 1266663784452738833, guid: 5c7f814ae4e575d4c9030f97af0bf2fe,
         type: 3}
